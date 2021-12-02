@@ -1,17 +1,42 @@
 import React from 'react';
-import { Text, View, StyleSheet } from 'react-native';
+import { Text, View, StyleSheet, TouchableOpacity, Image } from 'react-native';
 
 export default function Header(){
     return(
         <View style={styles.header}>
-            <Text>Meu Header</Text>
+           <TouchableOpacity>
+                <Image style={styles.logo}
+                source={require('../img/logo.png')}
+                />
+           </TouchableOpacity>
+           <TouchableOpacity>
+                <Image style={styles.send}
+                source={require('../img/send.png')}
+                />
+           </TouchableOpacity>
+
         </View>
     );
 }
 
 const styles = StyleSheet.create({
     header:{
-        
+      height:55,
+      backgroundColor: '#FFF',
+      flexDirection: 'row',
+      alignItems: 'center',
+      justifyContent: 'space-between',
+      paddingLeft:15,
+      paddingRight:15,
+      marginTop: 20,
+      borderBottomWidth:0.2,
+      shadowColor: '#000',
+      elevation: 2
+    },
+    send:{
+       width:23,
+       height:23 
+
     }
 
 })

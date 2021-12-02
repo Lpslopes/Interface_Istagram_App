@@ -5,17 +5,10 @@ import Header from './src/Header/Index';
 
 export default function App() {
   return (
-    <View style={styles.container}>
+    <View>
       <Header/>
     </View>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+
